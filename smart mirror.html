@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title></title>
+    <script>  
+        function ajax() {
+        var x = new XMLHttpRequest();
+        x.open("get","time.html");
+        x.onreadystatechange=function(){
+            var content = document.getElementById("time");
+            content.innerHTML=x.responseText;
+        }
+        x.send(null);
+
+}
+
+function date_time(id)
+{
+        date = new Date;
+        year = date.getFullYear();
+        month = date.getMonth();
+        months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'Jully', 'August', 'September', 'October', 'November', 'December');
+        d = date.getDate();
+        day = date.getDay();
+        days = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
+        h = date.getHours();
+        // if(h<10)
+        // {
+        //         h = "0"+h;
+        // }
+        m = date.getMinutes();
+        if(m<10)
+        {
+                m = "0"+m;
+        }
+        s = date.getSeconds();
+        if(s<10)
+        {
+                s = "0"+s;
+        }
+        result = h+':'+m;
+        document.getElementById(id).innerHTML = result;
+        setTimeout('date_time("'+id+'");','1000');
+        return true;
+}
+ // window.onload = date_time("time");
+
+
+
+// function time() {
+
+//     var d = new Date();
+//     var t= d.getTime();
+//     var h = d.getHours();
+//     var m = d.getMinutes();
+
+    
+//     if(m<=9 ){
+//         m="0"+m;
+
+//     }
+//     console.log(m);
+
+//     document.getElementById("time").innerHTML = h+":"+m;
+// }
+</script>
+	  <style type="text/css">
+    #tem{
+    	font-size: 158px;
+    	color: #ffffff;
+        padding-left: 80px;
+    }
+    body {
+    	background-color: #000000;
+    	font-family: Open Sans Light;
+
+
+    }
+    #c{
+        padding-bottom: 60px;
+    }
+    #t{
+        padding-left: 30px;
+    }
+    #time{
+        font-size: 158px;
+        color: #ffffff;
+        padding-left: 155px;
+
+    }
+    #de{        
+        font-size: 36px;
+        color: #ffffff;
+        padding-left: 80px;
+        font-family: Montserrat Regular;
+
+    }
+        #day{        
+        font-size: 36px;
+        color: #ffffff;
+        padding-left: 480px;
+        font-family: Montserrat Regular;
+
+    }
+           #lo{        
+        font-size: 27px;
+        color: #ffffff;
+        padding-left: 80px;
+        font-family: Montserrat Regular;
+
+    }
+           #mon{        
+        font-size: 27px;
+        color: #ffffff;
+        padding-left: 615px;
+        font-family: Montserrat Regular;
+
+    }
+          #star{        
+
+        padding-left: 510px;
+
+
+    } 
+    #div3{
+        padding-top: 10px;
+        padding-bottom: 10PX;
+    } 
+      #noti{        
+        font-size: 27px;
+        color: #ffffff;
+        padding-left: 15px;
+        font-family: Montserrat Regular;
+
+    }
+        #wel{
+        font-size: 158px;
+        color: #ffffff;
+        padding-left: 195px;
+
+    }
+    #div1{
+        padding-top: 80px;
+    }
+    #run{
+        font-size: 36px;
+        color: #ffffff;
+        font-family: Open Sans Light;
+
+    }
+
+  </style>
+</head>
+<body onload="date_time('time')">
+	<div id="div1">
+		<a id="tem">29</a>
+		<img id="c" src="c.png">
+        <img id="t" src="t.png">
+        <a id="time">8.30</a>
+	</div>
+    <div>
+        <a id="de">Mostly cloudy</a>
+        <a id="day">Thursday </a>
+    </div>
+    <div id="div3">
+        <a id="lo">Khonkaen</a>
+        <a id="mon">August 16</a>
+    </div>
+        <div>
+        <img id="star" src="star.png">
+          <a id="noti">SciWeek ,Khonkaen University </a>
+     </div>
+     <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+     <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+     <br><br><br>
+     <a id="wel">Welcome</a>
+     <div>
+         <marquee id="run" direction="left">ข้อความวิ่งจากขวาไปซ้ายข้อความวิ่งจากขวาไปซ้ายข้อความวิ่งจากขวาไปซ้ายข้อความวิ่งจากขวาไปซ้ายข้อความวิ่งจากขวาไปซ้ายข้อความวิ่งจากขวาไปซ้ายข้อความวิ่งจากขวาไปซ้ายข้อความวิ่งจากขวาไปซ้าย</marquee>
+     </div>
+
+
+</body>
+</html>
